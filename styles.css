@@ -1,0 +1,319 @@
+/*********General styles *************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Adding vertical rhythm */
+h1,
+h2,
+h3,
+ul,
+p,
+img,
+header,
+section,
+footer {
+  margin-bottom: 1.5rem;
+}
+
+#locations,
+#program,
+#gifts,
+#faq,
+#contact {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+body {
+  background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png");
+  width: 100%;
+}
+
+/* Typography */
+h1,
+h2 {
+  font-family: 'Great Vibes', cursive;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+#program,
+#locations p,
+.question,
+.answer,
+footer {
+  font-family: 'Muli', sans-serif;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.header-tagline,
+.date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+
+#program .tagline {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+footer {
+  font-size: 0.875rem;
+}
+
+h1,
+#program,
+#faq {
+  color: #d2ba87;
+}
+
+header,
+footer {
+  color: hsla(100, 100%, 100%, 0.9);
+}
+
+#locations,
+#gifts,
+#contact {
+  color: #444349;
+}
+
+a {
+  text-decoration: none;
+  color: #bd806e;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: #eda087;
+}
+
+/* Layout styles */
+
+header {
+  background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg") no-repeat 70% center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+#header-background {
+  background-color: hsla(100, 0%, 0%, .4);
+  width: 100%;
+}
+
+.header-tagline::after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+
+.date::before,
+.date::after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  background-color: #fff;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+
+#header-background,
+#program,
+#faq {
+  background-color: hsla(100, 0%, 0%, .6);
+}
+
+/*Locations */
+
+.wrapper {
+  /* container for #locations and #faq */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#locations img {
+  width: 7.5rem;
+}
+
+.blurb::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 25vw;
+  background-color: #444349;
+  margin: 1.5rem auto;
+}
+
+/* Program */
+#program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.program-wrapper {
+  text-align: left;
+}
+
+#program h2 {
+  margin-top: 1rem;
+}
+
+#program ul {
+  letter-spacing: .025rem;
+}
+
+/*Gifts*/
+
+#gifts img {
+  width: 7.5rem;
+}
+
+#gifts p:last-child {
+  /* To even out the bottom and top margins of this section. */
+  margin-bottom: 0;
+}
+
+/*Qustions and answers*/
+
+#faq {
+  width: 100%;
+}
+
+#faq h2 {
+  margin-top: 1rem;
+}
+
+#faq h3 {
+  font-weight: normal;
+  text-align: center;
+}
+
+.question-group {
+  text-align: left;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.question {
+  margin-bottom: 0.5rem;
+}
+
+.question-group::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background-color: #d2ba87;
+}
+
+/*Footer */
+
+footer {
+  background-color: #606060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  height: 80px;
+  text-align: center;
+}
+
+.footer-wrapper {
+  padding: 0.5rem 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/*Media styles */
+
+@media (min-width: 768px) {
+
+  #header-background {
+    border-radius: 4px;
+    padding: 1.5rem;
+    width: 50vw;
+  }
+
+  .header-tagline {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  h3 {
+    margin-top: 1rem;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  #faq h3 {
+    text-align: left;
+  }
+
+  .blurb,
+  .question-group {
+    padding: 0 1rem;
+    width: 30%;
+  }
+
+  .blurb::after,
+  .question-group::after {
+    display: none;
+  }
+
+  footer {
+    height: 50px;
+  }
+}
